@@ -1,102 +1,102 @@
-/* src/style/Layout/_footer.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
 .site-footer {
-  background-color: #1a1a1a;      /* Fond sombre */
-  color: #f5f5f5;                /* Texte clair */
-  padding: 2rem 1rem;
   font-family: sans-serif;
+  color: #f5f5f5;
 
-  /* Disposition flexible pour mobile et desktop */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2rem;
+  // Barre du haut violet
+  .footer-top {
+    background-color: #33475c;
+    .footer-top-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-  /* Brand section */
-  .footer-brand {
-    flex: 1 1 200px;
-    max-width: 300px;
+      .brand {
+        display: flex;
+        align-items: center;
+        .brand-logo {
+          width: 80px;
+          margin-right: 1rem;
+        }
+        .brand-tagline {
+          font-size: 1rem;
+        }
+      }
 
-    .footer-logo {
-      width: 150px;
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-
-    p {
-      margin: 0;
-      line-height: 1.2;
+      .social a {
+        margin-left: 0.5rem;
+        img {
+          width: 24px;
+          filter: brightness(0) invert(1);
+          transition: transform 0.2s;
+        }
+        &:hover img {
+          transform: scale(1.2);
+        }
+      }
     }
   }
 
-  /* Navigation liens */
-  .footer-nav {
-    flex: 1 1 150px;
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+  // Partie principale sombre
+  .footer-main {
+    background-color: #1a1a1a;
+    margin: 0;
+    padding: 2rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+
+    .column {
+      h5 {
+        margin-bottom: 0.75rem;
+        font-size: 1.1rem;
+        position: relative;
+        &::after {
+          content: '';
+          width: 50px;
+          height: 2px;
+          background: #33475c;
+          position: absolute;
+          bottom: -0.25rem;
+          left: 0;
+        }
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      li, p {
+        margin-bottom: 0.5rem;
+      }
+      a {
+        color: #f5f5f5;
+        text-decoration: none;
+        transition: color 0.2s;
+        &:hover {
+          color: #33475c;
+        }
+      }
     }
-    li {
-      margin-bottom: 0.5rem;
-    }
-    a {
-      color: #f5f5f5;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    a:hover {
-      color: #d4a017;   /* Accent doré */
+
+    .social-list li a {
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
-  /* Section contact */
-  .footer-contact {
-    flex: 1 1 200px;
-    h4 {
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-      font-size: 1.1rem;
-    }
-    p {
-      margin: 0.3rem 0;
-    }
-    a {
-      color: #f5f5f5;
-      text-decoration: underline;
-      transition: color 0.2s;
-    }
-    a:hover {
-      color: #d4a017;
-    }
-  }
-
-  /* Icônes sociales */
-  .social-icons {
-    flex: 1 1 150px;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    a {
-      display: inline-block;
-    }
-    img {
-      width: 24px;
-      height: auto;
-      filter: brightness(0) invert(1);
-      transition: transform 0.2s;
-    }
-    img:hover {
-      transform: scale(1.2);
-    }
-  }
-
-  /* Bas de footer */
+  // Bas de page
   .footer-bottom {
-    flex-basis: 100%;
+    background-color: #0f0f0f;
     text-align: center;
-    border-top: 1px solid rgba(255,255,255,0.2);
-    margin-top: 2rem;
-    padding-top: 1rem;
+    padding: 1rem;
     font-size: 0.8rem;
   }
 }
