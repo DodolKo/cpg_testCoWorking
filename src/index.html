@@ -1,14 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La bonne Pierre</title>
-
-
-
+    <title>La Bonne Pierre</title>
+    <link rel="stylesheet" href="../dist/style.css">
 </head>
 <body>
-    
+    <!-- Product Section -->
+    <section class="content">
+        <!-- Section Heritage -->
+        <div class="content__block content__block--heritage">
+            <div class="content__image">
+                <img src="img/content_1.png" alt="La Bonne Pierre - Héritage">
+                <div class="content__overlay">
+                    <span class="content__label">01</span>
+                    <h2>Héritage<br>Montagnard</h2>
+                    <p>Depuis les sommets alpins, une tradition brassicole ancestrale guide chaque geste de notre maître brasseur.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Savoir-faire -->
+        <div class="content__block content__block--craft">
+            <div class="content__text">
+                <span class="content__number">02</span>
+                <h2>Savoir-Faire<br>Artisanal</h2>
+                <p>Chaque bouteille de La Bonne Pierre raconte l'histoire d'une bière brassée avec passion, respect des traditions et ingrédients nobles sélectionnés.</p>
+                <div class="content__specs">
+                    <div class="spec">
+                        <span class="spec__value">5.2°</span>
+                        <span class="spec__label">Alcool</span>
+                    </div>
+                    <div class="spec">
+                        <span class="spec__value">Blonde</span>
+                        <span class="spec__label">Type</span>
+                    </div>
+                    <div class="spec">
+                        <span class="spec__value">Alpes</span>
+                        <span class="spec__label">Origine</span>
+                    </div>
+                </div>
+            </div>
+            <div class="content__image">
+                <img src="img/content_2.png" alt="La Bonne Pierre - Savoir-faire">
+                <div class="content__overlay content__overlay--right">
+                    <h3>Authenticité<br>& Pureté</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Dégustation -->
+        <div class="content__block content__block--taste">
+            <div class="content__full">
+                <span class="content__number">03</span>
+                <h2>L'Art de la<br>Dégustation</h2>
+                <div class="taste__grid">
+                    <div class="taste__item">
+                        <div class="taste__icon">👁️</div>
+                        <h4>Visuel</h4>
+                        <p>Robe dorée brillante, mousse blanche crémeuse</p>
+                    </div>
+                    <div class="taste__item">
+                        <div class="taste__icon">👃</div>
+                        <h4>Arôme</h4>
+                        <p>Notes florales et céréalières délicates</p>
+                    </div>
+                    <div class="taste__item">
+                        <div class="taste__icon">👅</div>
+                        <h4>Goût</h4>
+                        <p>Équilibre parfait entre douceur et amertume</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Gestion des overlays au touch/click pour mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            const imageContainers = document.querySelectorAll('.content__image');
+            
+            imageContainers.forEach(container => {
+                container.addEventListener('click', function(e) {
+                    // Toggle la classe active
+                    this.classList.toggle('active');
+                    
+                    // Fermer les autres overlays ouverts
+                    imageContainers.forEach(otherContainer => {
+                        if (otherContainer !== this) {
+                            otherContainer.classList.remove('active');
+                        }
+                    });
+                });
+            });
+
+            // Fermer l'overlay si on clique ailleurs
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.content__image')) {
+                    imageContainers.forEach(container => {
+                        container.classList.remove('active');
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
