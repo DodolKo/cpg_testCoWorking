@@ -1,0 +1,11 @@
+{
+  "name": "cpg_teamWorking",
+  "version": "1.0.0",
+  "description": "Petit site pour présenter une bière artisanale.",
+  "scripts": {
+    "build:scss": "sass src/style/global.scss dist/style.css"
+  },
+  "devDependencies": {
+    "sass": "^1.69.0"
+  }
+}
