@@ -1,8 +1,8 @@
 // Import layout styles
-@import "Layout/content";
-
-@import "Layout/footer.scss";
-
 @use "base/reset";
 @use "base/base";
 @use "layout/hero";
+
+@import "Layout/content";
+
+@import "Layout/footer.scss";

@@ -7,17 +7,17 @@
 }
 
 body {
-  font-family: 'Georgia', serif;
+  font-family: "Georgia", serif;
   line-height: 1.6;
   color: #333;
   background: #f8f9fa;
 }
 
 // Hero Section
-.hero {
+.heros {
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-              url('../img/content_1.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../img/content_1.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -49,8 +49,13 @@ body {
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 // Product Section
@@ -65,7 +70,7 @@ body {
 
 .product__image {
   text-align: center;
-  
+
   img {
     max-width: 100%;
     height: auto;
@@ -105,7 +110,7 @@ body {
     h1 {
       font-size: 4rem;
     }
-    
+
     p {
       font-size: 1.5rem;
     }
@@ -118,7 +123,7 @@ body {
 
   .product__info {
     text-align: left;
-    
+
     p {
       margin-left: 0;
       margin-right: 0;
@@ -135,7 +140,7 @@ body {
 }
 
 body {
-  font-family: 'Georgia', serif;
+  font-family: "Georgia", serif;
   line-height: 1.6;
   color: #333;
   background: #eceeef;
@@ -157,9 +162,9 @@ body {
       position: relative;
       overflow: hidden;
       border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
       cursor: pointer;
-      
+
       img {
         width: 100%;
         height: 500px;
@@ -214,22 +219,24 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, 
-    rgba(180, 83, 9, 0.95) 0%, 
-    rgba(217, 119, 6, 0.9) 50%, 
-    rgba(245, 158, 11, 0.85) 100%);
+  background: linear-gradient(
+    45deg,
+    rgba(180, 83, 9, 0.95) 0%,
+    rgba(217, 119, 6, 0.9) 50%,
+    rgba(245, 158, 11, 0.85) 100%
+  );
   color: white;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+
   // Masqué par défaut
   opacity: 0;
   visibility: hidden;
   transition: all 0.4s ease;
   transform: translateY(20px);
-  
+
   h2 {
     font-size: 2.5rem;
     font-weight: bold;
@@ -254,9 +261,11 @@ body {
     align-items: flex-end;
     text-align: right;
     justify-content: flex-end;
-    background: linear-gradient(-45deg, 
-      rgba(44, 62, 80, 0.95) 0%, 
-      rgba(52, 73, 94, 0.9) 100%);
+    background: linear-gradient(
+      -45deg,
+      rgba(44, 62, 80, 0.95) 0%,
+      rgba(52, 73, 94, 0.9) 100%
+    );
   }
 
   // Apparition au hover (desktop)
@@ -278,7 +287,7 @@ body {
   position: absolute;
   top: 1.5rem;
   left: 1.5rem;
-  background: rgba(255,255,255,0.3);
+  background: rgba(255, 255, 255, 0.3);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 50px;
@@ -297,7 +306,7 @@ body {
 // Section texte
 .content__text {
   position: relative;
-  
+
   h2 {
     font-size: 2.8rem;
     color: #2c3e50;
@@ -338,7 +347,7 @@ body {
   padding: 1.5rem 1rem;
   background: white;
   border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   border: 2px solid transparent;
   transition: all 0.3s ease;
 
@@ -380,11 +389,11 @@ body {
 }
 
 .taste__item {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   padding: 2rem;
   border-radius: 15px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   text-align: center;
   transition: transform 0.3s ease;
 
@@ -400,7 +409,7 @@ body {
 
   p {
     font-size: 1rem;
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
     line-height: 1.6;
   }
 }
@@ -425,7 +434,7 @@ body {
 
   .content__overlay {
     padding: 3rem;
-    
+
     h2 {
       font-size: 3.5rem;
     }
